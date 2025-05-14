@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="utf-8"?>
+<PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <!-- Account Preferences -->
+    <PreferenceCategory
+        android:title="Account Preferences"
+        android:key="account_preferences"
+        app:iconSpaceReserved="false">
+
+        <Preference
+            android:key="user_profile"
+            app:iconSpaceReserved="false"
+            android:title="Name, Email, Class, etc"
+            android:summary="User Profile">
+        </Preference>
+
+        <!-- Privacy Setting -->
+        <CheckBoxPreference
+            android:key="privacy_checkbox"
+            android:title="Privacy Setting"
+            app:iconSpaceReserved="false"
+            android:summary="Posting your records anonymously"
+            android:defaultValue="false" />
+
+    </PreferenceCategory>
+
+    <!-- Additional Settings -->
+    <PreferenceCategory
+        android:title="Additional Settings"
+        android:key="additional_settings"
+        app:iconSpaceReserved="false">
+
+        <ListPreference
+            android:key="unit_preference"
+            android:title="Unit Preference"
+            android:summary="Select the units"
+            android:dialogTitle="Unit Preference"
+            app:iconSpaceReserved="false"
+            android:entries="@array/unit_preference_entries"
+            android:entryValues="@array/unit_preference_values"
+            android:defaultValue="metric"
+            android:negativeButtonText="Cancel" />
+
+        <!-- Comments -->
+        <EditTextPreference
+            android:key="setting_comments"
+            android:title="Comments"
+            app:iconSpaceReserved="false"
+            android:summary="Please enter your comments" />
+
+    </PreferenceCategory>
+
+    <!-- Misc -->
+    <PreferenceCategory
+        android:title="Misc."
+        android:key="miscellaneous"
+        app:iconSpaceReserved="false">
+
+        <Preference
+            android:key="webpage"
+            android:title="Webpage"
+            app:iconSpaceReserved="false"
+            android:summary="https://www.sfu.ca/computing.html"/>
+    </PreferenceCategory>
+
+</PreferenceScreen>
